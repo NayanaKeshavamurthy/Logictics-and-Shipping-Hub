@@ -1,0 +1,71 @@
+<!-- Navbar Start-->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+          <h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="/about" class="nav-item nav-link">About</a>
+            <a href="/services" class="nav-item nav-link">Services</a>
+            <a href="/contact" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black; text-decoration: none; background-color: #FF4800;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/login">Customers</a>
+              <a class="dropdown-item" routerLink="/admin-login">Admin/Warehouse Manager</a>
+              <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+            </div>
+          </div>
+          <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none; background-color: #FF4800; color:black;" >Sign-up</a>
+      </div>
+  </nav>
+</div>
+<!-- NavbarEnds -->
+<div class='container justify-content-center'>
+  <div class='login'>
+    <h2> User Registration</h2>
+  </div>
+  <div class="form-signin w-100 auto">
+    <form #userForm="ngForm" (ngSubmit) ="onSubmit(userForm)"  novalidate>
+      <div class="form-floating" >
+        <input type="text" class="form-control" id="floatingName" placeholder="UserName" name="name" [(ngModel)]="model.name" required>
+        <label for="floatingName">User Name</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"  name="email" [(ngModel)]="model.email" required>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingMobile" placeholder="Mobile Number" name="mobile" [(ngModel)]="model.mobile" required>
+        <label for="floatingMobile">Mobile Number</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  name="password" [(ngModel)]="model.password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingRePassword" placeholder="Re-Type Password" required>
+        <label for="floatingRePassword">Re-Type Password</label>
+      </div>
+      <br>
+        <button class="w-100 btn btn-lg btn-primary"  type="submit" style="background-color: #FF4800;">Sign Up</button>
+
+    </form>
+    <!-- <button class="w-100 btn btn-lg btn-primary" routerLink="/customerLogin">Sign Up</button> -->
+  </div>
+
+
+</div>

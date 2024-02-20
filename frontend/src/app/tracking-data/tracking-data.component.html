@@ -1,0 +1,276 @@
+<!-- Navbar Start-->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="/about" class="nav-item nav-link">About</a>
+              <a href="/services" class="nav-item nav-link">Services</a>
+              <a href="/contact" class="nav-item nav-link">Contact</a>
+            </div>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+                Login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/login">Customers</a>
+                <a class="dropdown-item" routerLink="/admin-login">Admin/Warehouse Manager</a>
+                <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+              </div>
+            </div>
+            <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+        </div>
+    </nav>
+  </div>
+  <!-- NavbarEnds -->
+<!-- BodyInformationStart -->
+
+<!-- Progress Bar -->
+<div class="container px-0 px-md-1 py-0 ">
+  <div class="card">
+    <div class="row d-flex justify-content-between px-1 top" style="background-color: #FF4800;">
+      <div class="d-flex">
+        <h5>
+          ORDER
+          <span class="text-primary font-weight-bold">{{oid}}</span>
+        </h5>
+      </div>
+      <div class="d-flex flex-column text-sm-right">
+        <p class="mb-0" style="color: black;">
+          Expected Arrival <span class="font-weight-bold">{{eta}}</span>
+        </p>
+      </div>
+    </div>
+    <!-- Add class "active" to progress -->
+    <div class="row justify-content-between top">
+      <table>
+          <tr>
+              <td>
+                  <div class="flex-column d-flex icon-content">
+                      <img src="../../assets/CheckList.png" alt="" class="icon" />
+                      <p class="font-weight-bold">Order <br />Processed</p>
+                      </div>
+              </td>
+              <td>
+
+                      <div class="d-flex icon-content">
+                          <ul id="progressbar" class="text-center">
+                            <li class="active step0"></li>
+                          </ul>
+                      </div>
+
+              </td>
+          </tr>
+          <!-- //Second -->
+          <tr>
+              <td>
+                  <div class="flex-column d-flex icon-content">
+                      <img src="../../assets/Shipping.png" alt="" class="icon" />
+                      <p class="font-weight-bold">Order <br />Picked</p>
+                      </div>
+              </td>
+              <td>
+
+                      <div class="d-flex icon-content">
+                          <div *ngIf="picked">
+                            <ul id="progressbar" class="text-center">
+                              <li class="active step0"></li>
+                            </ul>
+
+                          </div>
+                          <div *ngIf="!picked">
+                            <ul id="progressbar" class="text-center">
+                              <li class=" step0"></li>
+                            </ul>
+
+                          </div>
+
+                      </div>
+
+              </td>
+          </tr>
+          <!-- //Third -->
+          <tr>
+              <td>
+                  <div class="flex-column d-flex icon-content">
+                      <img src="../../assets/Delivery.png" alt="" class="icon" />
+                      <p class="font-weight-bold">Order In  <br />Origin WareHouse</p>
+                  </div>
+              </td>
+              <td>
+
+                      <div class="d-flex icon-content">
+                        <div *ngIf="oInOw">
+                          <ul id="progressbar" class="text-center">
+                            <li class="active step0"></li>
+                          </ul>
+
+                        </div>
+                        <div *ngIf="!oInOw">
+                          <ul id="progressbar" class="text-center">
+                            <li class=" step0"></li>
+                          </ul>
+
+                        </div>
+                      </div>
+
+              </td>
+          </tr>
+          <!-- Fourth -->
+          <tr>
+            <td>
+                <div class="flex-column d-flex icon-content">
+                    <img src="../../assets/Shipping.png" alt="" class="icon" />
+                    <p class="font-weight-bold">Order Left<br /> Origin WareHouse</p>
+                    </div>
+            </td>
+            <td>
+
+                    <div class="d-flex icon-content">
+                      <div *ngIf="oLfOw">
+                        <ul id="progressbar" class="text-center">
+                          <li class="active step0"></li>
+                        </ul>
+
+                      </div>
+                      <div *ngIf="!oLfOw">
+                        <ul id="progressbar" class="text-center">
+                          <li class=" step0"></li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+            </td>
+        </tr>
+        <!-- Five-->
+        <tr>
+          <td>
+              <div class="flex-column d-flex icon-content">
+                  <img src="../../assets/Delivery.png" alt="" class="icon" />
+                  <p class="font-weight-bold">Order - In  <br />Near by Warehouse</p>
+                  </div>
+          </td>
+          <td>
+
+                  <div class="d-flex icon-content">
+                    <div *ngIf="oInNw">
+                      <ul id="progressbar" class="text-center">
+                        <li class="active step0"></li>
+                      </ul>
+
+                    </div>
+                    <div *ngIf="!oInNw">
+                      <ul id="progressbar" class="text-center">
+                        <li class=" step0"></li>
+                      </ul>
+
+                    </div>
+                  </div>
+
+          </td>
+      </tr>
+      <!-- six -->
+      <tr>
+        <td>
+            <div class="flex-column d-flex icon-content">
+                <img src="../../assets/Shipping.png" alt="" class="icon" />
+                <p class="font-weight-bold">Out for Delivery</p>
+                </div>
+        </td>
+        <td>
+
+                <div class="d-flex icon-content">
+                  <div *ngIf="ofd">
+                    <ul id="progressbar" class="text-center">
+                      <li class="active step0"></li>
+                    </ul>
+
+                  </div>
+                  <div *ngIf="!ofd">
+                    <ul id="progressbar" class="text-center">
+                      <li class=" step0"></li>
+                    </ul>
+
+                  </div>
+                </div>
+
+        </td>
+    </tr>
+    <!-- seven -->
+
+        <tr>
+              <td>
+                  <div class="flex-column d-flex icon-content">
+                      <img src="../../assets/Home.png" alt="" class="icon" />
+                      <p class="font-weight-bold">Order <br />Delivered</p>
+                  </div>
+              </td>
+              <td>
+                      <div class="d-flex icon-content">
+                        <div *ngIf="dvd">
+                          <ul id="progressbar" class="text-center">
+                            <li class="active step0"></li>
+                          </ul>
+
+                        </div>
+                        <div *ngIf="!dvd">
+                          <ul id="progressbar" class="text-center">
+                            <li class=" step0"></li>
+                          </ul>
+
+                        </div>
+                      </div>
+
+              </td>
+          </tr>
+      </table>
+</div>
+</div>
+</div>
+
+
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.8460334488!2d-87.73196395!3d41.83373295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1668828750976!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+<!-- BodyInformationEnd -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
+
+                <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                    <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="/services"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                        <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mb-5">
+            <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@sns.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer End -->

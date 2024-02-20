@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/dropOffPackage" class="nav-link ">Place Order</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/admin" class="nav-link ">Update Price</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/coupon" class="nav-link">Update Order Status</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/wareouseinfo" class=" nav-link">Update warehouse info</a>
+
+      </li>
+       <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/inventoryinfo" class="nav-item nav-link">Inventory info</a>
+       </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="container-fluid p-0">
+
+  <br>
+  <br>
+  <div class="container">
+    <h4>Select warehouse</h4>
+    <select class="drop">
+        <option value="item1">SNS Lake Shore Warehouse</option>
+        <option value="item2">SNS Bridgeport Warehouse</option>
+        <option value="item3">SNS Fuller Park Warehouse</option>
+    </select>
+    <br>
+    <br>
+    <h4>Enter Address to be updated</h4>
+    <textarea type="text" class="drop"></textarea>
+    <br>
+    <br>
+    <button class=" btn-primary py-2 px-4 d-none d-lg-block" onclick="showAlert()">Update</button>
+  </div>
+</div>
+
+<!-- footer-->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+  <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+  <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+  <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+  <p><i class="fa fa-envelope mr-2"></i>info@kgf.com</p>
+  <div class="d-flex justify-content-start mt-4">
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>

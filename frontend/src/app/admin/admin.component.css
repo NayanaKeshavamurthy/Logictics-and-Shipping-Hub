@@ -1,0 +1,21 @@
+.container {
+    align-content: center;
+}
+
+.drop{
+    width: 200px;
+}
+
+.btn-primary{
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    background-color: black;
+}
+.footer{
+position:fixed;
+bottom:0;
+left:0;
+}

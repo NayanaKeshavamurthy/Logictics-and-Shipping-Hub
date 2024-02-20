@@ -1,0 +1,238 @@
+<!-- <p>home works!</p> -->
+<!-- Navbar Start-->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg  bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <div class="navbar-brand ml-lg-3">
+            <h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2>
+        </div>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="/about" class="nav-item nav-link">About</a>
+            <a href="/services" class="nav-item nav-link">Services</a>
+            <a href="/contact" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black; text-decoration: none; background-color: #FF4800;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/login">Customers</a>
+              <a class="dropdown-item" routerLink="/admin-login">Admin/Warehouse Manager</a>
+              <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+            </div>
+          </div>
+          <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none; background-color: #FF4800; color:black;" >Sign-up</a>
+      </div>
+  </nav>
+</div>
+
+
+
+<!-- Header Start -->
+ <div class="jumbotron jumbotron-fluid mb-5" style="background-color: #FF4800;">
+    <div class="container text-center py-5">
+        <h1 class="text-white">Safe & Faster</h1>
+        <h1 class="text-white display-3 mb-5">Logistics & Shipping Services</h1>
+        <!-- <div class="mx-auto" style="width: 100%; max-width: 600px;">
+            <div class="input-group">
+                <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tracking Id">
+
+                <div class="input-group-append">
+                   <button class="btn btn-primary px-3" style="background-color: #FF4800;"><a routerLink="/tracking" routerLinkActive="active">Track & Trace</a></button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- Header End -->
+
+
+
+
+<!-- Services Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h6 class="text-dark text-uppercase font-weight-bold">Our Services</h6>
+            <h1 class="mb-4">Best Logistic Services</h1>
+        </div>
+        <a  routerLink="/getEstimate" routerLinkActive="active" ></a>
+          <div class="row pb-3">
+                <div class="col text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #FF4800;">
+                        <i class="fa fa-2x fa-plane text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0"><a  routerLink="/getEstimate" routerLinkActive="active" style="color:white">Get Estimate</a></h6>
+                    </div>
+                    <p>Get a approximate value according to the weight and the distance the parcel has to be delivered.</p>
+                </div>
+
+              <div class="col text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #FF4800;">
+                    <i class="fa fa-2x fa-truck text-dark pr-3"></i>
+                    <h6 class="text-white font-weight-medium m-0"><a  routerLink="/nearMe" routerLinkActive="active"style="color:white" >Warehouse near me!</a></h6>
+                </div>
+                <p>Find our nearest store to your home for a quick drop-off of your packages!</p>
+            </div>
+
+            <div class="col  text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center mb-4 p-4" style="background-color: #FF4800;">
+                    <i class="fa fa-2x fa-store text-dark pr-3"></i>
+                    <h6 class="text-white font-weight-medium m-0"><a  routerLink="/pickUpDropOff" routerLinkActive="active" style="color:white">Pick Up/Drop Off</a></h6>
+                </div>
+                <p>Get the nearest pickup/dropoff boxes to get your shipments/courier done. </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+
+<!-- Features Start -->
+ <div class="container-fluid bg-purple my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid w-100" src="../../assets/feature.jpg" alt="">
+            </div>
+            <div class="col-lg-7 py-5 py-lg-0">
+                <h6 class="text-dark text-uppercase font-weight-bold">Why Choose Us</h6>
+                <h1 class="mb-4">Efficient, Secure, and Reliable Logistics Services</h1>
+                <ul class="list-inline">
+                    <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Excellence in Industry Standards</h6>
+                    <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Rapid Response Emergency Services</h6></li>
+                    <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Dedicated 24/7 Customer Support</h6></li>
+                </ul>
+                <!-- <a href="" class="btn btn-primary mt-3 py-2 px-4">Learn More</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+<!-- Testimonial Start -->
+
+<pre>
+    {{stringifiedData}}
+</pre>
+
+<div class="container-fluid py-5" style="background-color: #FF4800;">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h6 class="text-uppercase font-weight-bold" style="color: white;">Testimonial</h6>
+            <h1 class="mb-4" style="color: white;">What our Clients Say</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="position-relative bg-secondary p-4">
+                <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
+                <div class="d-flex align-items-center mb-3">
+                    <img class="img-fluid rounded-circle" src="../../assets/testimonial-1.jpeg" style="width: 60px; height: 60px;" alt="">
+                    <div class="ml-3">
+                        <h6 class="font-weight-semi-bold m-0">Hexaware</h6>
+                        <small>Vice President - Hexaware</small>
+                    </div>
+                </div>
+                <p class="m-0">My interaction with the service was fantastic. It provided a highly positive and satisfying experience.</p>
+            </div>
+            <br>
+            <div class="position-relative bg-secondary p-4">
+                <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
+                <div class="d-flex align-items-center mb-3">
+                    <img class="img-fluid rounded-circle" src="../../assets/testimonial-2.jpeg" style="width: 60px; height: 60px;" alt="">
+                    <div class="ml-3">
+                        <h6 class="font-weight-semi-bold m-0">Hyundai</h6>
+                        <small> Manager, Hyundai </small>
+                    </div>
+                </div>
+                <p class="m-0">My encounter with the service was excellent, offering a notably positive and enjoyable experience. I love their service.</p>
+            </div>
+            <br>
+            <div class="position-relative bg-secondary p-4">
+                <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
+                <div class="d-flex align-items-center mb-3">
+                    <img class="img-fluid rounded-circle" src="../../assets/testimonial-3.jpeg" style="width: 60px; height: 60px;" alt="">
+                    <div class="ml-3">
+                        <h6 class="font-weight-semi-bold m-0">Head of Transportaion</h6>
+                        <small>Hyundai, Head of Transportaion.</small>
+                    </div>
+                </div>
+                <p class="m-0">The SNS service stands out as one of my preferred choices. It significantly simplifies the entire process.</p>
+            </div>
+            <br>
+            <div class="position-relative bg-secondary p-4">
+                <i class="fa fa-3x fa-quote-right text-dark position-absolute" style="top: -6px; right: 0;"></i>
+                <div class="d-flex align-items-center mb-3">
+                    <img class="img-fluid rounded-circle" src="../../assets/testimonial-4.jpeg" style="width: 60px; height: 60px;" alt="">
+                    <div class="ml-3">
+                        <h6 class="font-weight-semi-bold m-0">President</h6>
+                        <small>DHL, President</small>
+                    </div>
+                </div>
+                <p class="m-0">The SNS service is at the forefront of my preferred options, streamlining the entire process and making it exceptionally convenient.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
+
+                <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                    <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="/services"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                        <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mb-5">
+            <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@sns.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>

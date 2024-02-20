@@ -1,0 +1,107 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="collapse navbar-collapse justify-content-between px-lg-3">
+              <a class="nav-link" routerLink="/customerLogin" routerLinkActive="active">Home</a>
+            </li>
+            <li class="collapse navbar-collapse justify-content-between px-lg-3">
+              <a class="nav-link" routerLink="/modifyOrder" routerLinkActive="active">Modify Order</a>
+            </li>
+            <li class="collapse navbar-collapse justify-content-between px-lg-3">
+                <a class="nav-link" routerLink="/viewOrder" routerLinkActive="active">View Orders</a>
+              </li>
+            <li class="collapse navbar-collapse justify-content-between px-lg-3">
+                <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+              </li>
+  
+            <li>
+                <button class="btn btn-outline-success collapse navbar-collapse  justify-content-between px-lg-3" (click)="logout()" >Logout</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- RateUsContentStarting -->
+<div class="rateUsContent">
+  <img class="bgImg" alt="">
+  <form class="rateUsForm" #productsForm="ngForm" (submit)="sendUserData(productsForm.value)">
+      <div style="max-width: 400px;"></div>
+
+      <div style="padding-bottom: 18px;font-size : 24px;">Product Review</div>
+
+      <div style="padding-bottom: 18px;">Reviewer Name<span style="color: red;"> *</span><br/>
+          <input type="text" id="reviewerName" name="reviewerName" style="max-width : 450px;" class="form-control" ngModel required>
+      </div>
+
+      <div style="padding-bottom: 18px;">Order ID<span style="color: red;"> *</span><br/>
+          <input type="number" id="orderId" name="orderId" style="max-width : 450px;" class="form-control" ngModel required>
+      </div>
+
+
+      <div style="padding-bottom: 18px;">Rate Our Services<span style="color: red;"> *</span><br/>
+          <input type="number" id="rating" name="rating" min="1" max="5" style="max-width : 450px;" class="form-control" ngModel required >
+      </div>
+
+      <div style="padding-bottom: 18px;">Title<span style="color: red;"> *</span><br/>
+          <input type="text" id="title" name="title" style="max-width : 450px;" class="form-control" ngModel required>
+      </div>
+
+      <div style="padding-bottom: 18px;">Suggestions/Area of Improvement<br/>
+          <textarea id="name" false  name="suggestions" style="max-width : 450px;" rows="3" class="form-control" ngModel required></textarea>
+      </div>
+
+      <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br/>
+          <textarea id="review" name="review" style="max-width : 450px;" rows="9" class="form-control" ngModel required></textarea>
+      </div>
+
+      <div style="padding-bottom: 18px;">Would you recommend our services?<br/>
+          <span><input type="radio" id="data_9_0" name="data_9" value="Yes"/> Yes</span><br/>
+          <span><input type="radio" id="data_9_1" name="data_9" value="No"/> No</span><br/>
+          <span><input type="radio" id="data_9_2" name="data_9" value="I am not sure"/> I am not sure</span><br/>
+      </div>
+
+      <div><input name="skip_Submit" value="Submit" type="submit" class="btn btn-primary mb-2"></div>
+
+  </form>
+</div>
+<!-- RateUsContentEnding -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+  <div class="row pt-5">
+      <div class="col-lg-7 col-md-6">
+          <div class="row">
+              <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                  <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                  <div class="d-flex flex-column justify-content-start">
+                      <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                      <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                      <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                      <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
+                      <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-5">
+          <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                  <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, New York, USA</p>
+                  <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                  <p><i class="fa fa-envelope mr-2"></i>info@kgf.com</p>
+                  <div class="d-flex justify-content-start mt-4">
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+      </div>
+  </div>
+</div>
+

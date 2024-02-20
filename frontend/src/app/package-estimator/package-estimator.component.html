@@ -1,0 +1,203 @@
+<!-- Navbar Start-->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html" class="navbar-brand ml-lg-3">
+          <h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="/about" class="nav-item nav-link">About</a>
+            <a href="/services" class="nav-item nav-link">Services</a>
+            <a href="/contact" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-primary py-2 px-4 d-none d-lg-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/login">Customers</a>
+              <a class="dropdown-item" routerLink="/admin-login">Admin/Wearhouse Manager</a>
+              <a class="dropdown-item" href="/dp-login">Delivery Partner</a>
+            </div>
+          </div>
+          <a routerLink="/register" routerLinkActive="active" class=" btn-primary py-2 px-4" style="margin-left: 50px; text-decoration: none;" >Sign-up</a>
+      </div>
+  </nav>
+</div>
+<!-- NavbarEnds -->
+
+
+<div class="shippingCalculator">
+<!-- Calculting the price for shippment -->
+<div class="getEstimation" >
+  <div style="margin-left: 10px;"><h2>Calculate the shipping rates!</h2></div>
+  <div>
+
+      <table >
+          <tr >
+              <td>
+                  <input class="form-control" type="text" name="address" id="" placeholder="FROM ADDRESS">
+
+              </td>
+              <td>
+                  <input class="form-control" type="text" placeholder="FROM ZIPCODE" name="zipcode1" [(ngModel)]="zipcode1">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <input class="form-control" type="text" name="address" id="" placeholder="FROM ADDRESS">
+
+              </td>
+              <td>
+                  <input class="form-control" type="text" placeholder="TO ZIPCODE"  name="zipcode2" [(ngModel)]="zipcode2">
+              </td>
+          </tr>
+          <!-- <tr>
+              <td> -->
+                  <!-- <input type="text" name="distanceOut" id="distanceCalculated"> -->
+                  <!-- <h4>
+                      <span onclick="document.getElementById('rateText').innerHTML='The distance between each address in kms is: '">The distance between each address in kms is: </span> {{output}}
+                  </h4>
+              </td>
+          </tr>
+          <tr>
+              <td> <button (click)="getMethod()" class="btn btn-primary px-3" id="rateText"> Get Estimation</button></td>
+          </tr> -->
+      </table>
+
+  </div>
+</div>
+<br>
+<!-- Type of package to be shipped -->
+  <div>
+      <h4 style="text-align: center;">Tell us about your shipping. </h4>
+  </div>
+  <table style="margin-left: 150px;">
+      <tr>
+          <td>
+              <h6 style="text-align: center;" >Your Packaging</h6>
+          </td>
+      </tr>
+      <tr>
+          <div class="dropdown">
+            <select class="form-select form-control" id="top" >
+              <option value="1" selected>SNS SMALL ENVELOPE</option>
+              <option value="2">SNS SMALL BOX (weight < 10kgs)</option>
+              <option value="3">SNS LARGE BOX (weight > 10kgs)</option>
+            </select>
+          </div>
+      </tr>
+  </table>
+
+<br>
+<div>
+  <table>
+      <tr>
+          <td>
+              <h6 style=" text-align: center;">No. of Packages</h6>
+          </td>
+          <td style="padding-left:10px; text-align: center;">
+              <h6>Weight Per Package</h6>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <div class="dropdown">
+                <input type="text" class="form-control"placeholder="Enter Number ">
+              </div>
+          </td>
+          <td>
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Enter the Weight">
+          </td>
+      </tr>
+  </table>
+
+</div>
+
+
+<!-- End of the package to be shipped -->
+<h4>
+  <br>
+  <span onclick="document.document.getElementById('finalPrice').toggleAttribute"> The Distace in Miles: {{output}}</span>
+  <br>
+  <span onclick="document.getElementById('finalPrice').toggleAttribute">The total cost would be:{{totalValue}} </span>
+  <br>
+</h4>
+<button (click)="getMethod()" class="btn btn-primary px-6" id="finalPrice"> Calculate the Price</button>
+<!-- End of calculating the shippment -->
+
+<!-- Description about why choose SNS -->
+<div>
+  <br>
+  <div><h2>Why choose SNS?</h2></div>
+  <div>
+      <table>
+          <tr>
+              <td>
+                  <h4>WORLDWIDE COVERAGE</h4>
+                  <p>
+                      You can send small, big, express and less urgent shipments to over 220 countries and territories.
+                  </p>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <h4>FREE PACKAGING</h4>
+                  <p>
+                      Need envelopes or boxes? Get them all for free by just signing up and opening an account.
+                  </p>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <h4>SMART TOOLS</h4>
+                  <p>
+                      Our tools put you in control - from real-time tracking updates to flexible delivery options, you decide exactly how you want to ship.
+                  </p>
+              </td>
+          </tr>
+      </table>
+  </div>
+</div>
+<!-- End of Description -->
+</div>
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+  <div class="row pt-5">
+      <div class="col-lg-7 col-md-6">
+          <div class="row">
+
+              <div class="col-md-6 mb-5" style="padding-left: 150px;">
+                  <h3 class=" mb-4" style="color:#3d7e70;">Quick Links</h3>
+                  <div class="d-flex flex-column justify-content-start">
+                      <a class="text-white mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                      <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                      <a class="text-white mb-2" href="/services"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                      <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-5">
+          <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+                  <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+                  <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+                  <p><i class="fa fa-envelope mr-2"></i>info@sns.com</p>
+                  <div class="d-flex justify-content-start mt-4">
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer End -->

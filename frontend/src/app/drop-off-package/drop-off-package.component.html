@@ -1,0 +1,313 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" routerLink="/customerLogin" routerLinkActive="active">Home</a>
+        </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" routerLink="/modifyOrder" routerLinkActive="active">Modify Order</a>
+        </li>
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/viewOrder" routerLinkActive="active">View Order</a>
+          </li>
+       
+        <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Navbar ending for the customer login page -->
+
+<!-- Start of the address and payment part -->
+<br>
+
+<div class="wholeContent">
+  <div *ngIf="add_section">
+    <form class="form-inline"  #orderForm="ngForm" (ngSubmit) = "onSubmit(orderForm)" >
+      <div><h3> 1. Address Information for the shipment</h3></div>
+      <div><h4> <span> &emsp;</span> Enter your (FROM) address and the recipient's (TO) address</h4></div>
+      <table class="mainAddressTable">
+          <tr>
+              <td>
+                  <h6>From Address</h6>
+                  <div>
+                      <h6>Senders Name</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" name="fName" [(ngModel)]="order.fName" placeholder="" required>
+                  </div>
+              </td>
+              <td>
+                  <h6>To Address</h6>
+                  <div>
+                      <h6>Recipient Name</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" name="dName" [(ngModel)]="order.dName"placeholder="" required>
+                  </div>
+              </td>
+          </tr>
+
+          <!--  Row for address -->
+
+          <tr>
+              <td>
+                  <div>
+                      <h6>Address</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address" name="fAdd" [(ngModel)]="order.fAdd" required>
+                  </div>
+              </td>
+              <td>
+                  <div>
+                      <h6>Address</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Street Address"  name="dAdd" [(ngModel)]="order.dAdd" required>
+                  </div>
+              </td>
+
+          </tr>
+
+          <!-- 3rd Row address end -->
+
+          <!-- 4th row start zip code -->
+          <tr>
+              <td>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Apt, Floor, Suite, etc."  name="f_apt" [(ngModel)]="f_apt" required>
+                  </div>
+              <td>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Apt, Floor, Suite, etc." name="d_apt" [(ngModel)]="d_apt" required>
+                  </div>
+              </td>
+          </tr>
+
+          <!-- 4th row end -->
+
+          <!-- 5th Row start -->
+          <tr>
+              <td>
+                  <div>
+                      <h6>ZIP</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="ZIP Code" name="fZip" [(ngModel)]="order.fZip" required>
+                  </div>
+              </td>
+              <td>
+                  <div>
+                      <h6>ZIP</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="ZIP code" name="dZip" [(ngModel)]="order.dZip" required>
+                  </div>
+              </td>
+          </tr>
+
+          <!-- 5th Row End -->
+
+          <!-- 6th row start -->
+          <tr>
+              <td>
+                  <div>
+                      <h6>City</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="City" name="fCity" [(ngModel)]="order.fCity" required>
+                  </div>
+              </td>
+              <td>
+                  <div>
+                      <h6>City</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="City" name="dCity" [(ngModel)]="order.dCity" required>
+                  </div>
+              </td>
+          </tr>
+
+          <!-- 6th Row End -->
+
+          <!-- State starting -->
+
+          <tr>
+              <td>
+
+                    <div>
+                      <h6>State</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="state" name="fstate" [(ngModel)]="order.fState" required>
+                  </div>
+              </td>
+              <td>
+                    <div>
+                      <h6>State</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="State" name="dstate" [(ngModel)]="order.dState" required>
+                  </div>
+              </td>
+          </tr>
+
+
+          <!-- State Ending -->
+
+          <!-- 7th row start -->
+          <tr>
+              <td>
+                  <div>
+                      <h6>Phone</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Mobile Number" name="fmobile" [(ngModel)]="order.fMobile" required>
+                  </div>
+              </td>
+              <td>
+                  <div>
+                      <h6>Phone</h6>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Mobile Number" name="dmobile" [(ngModel)]="order.dMobile" required>
+                  </div>
+              </td>
+          </tr>
+
+          <!-- 7th Row End -->
+          <button type="submit" class="btn btn-primary mb-2" >Continue</button>
+      </table>
+
+  </form>
+
+  </div>
+
+
+    <!-- End of the collection of the address -->
+
+    <!-- Start of the payment part -->
+<br>
+
+<div *ngIf="pkg_section">
+  <form #typeSelect="ngForm" class="payment" (ngSubmit) = "onSelectType(typeSelect)">
+     <!-- Type of package to be shipped -->
+    <div>
+        <h4>2. Tell us about your shipping. </h4>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <h6 >Packaging Type</h6>
+            </td>
+        </tr>
+        <tr>
+
+                <select class="form-select form-control" id="top" [(ngModel)]="order.top" name="top">
+                  <option value="1" selected>SNS SMALL ENVELOPE</option>
+                  <option value="2">SNS SMALL BOX (weight < 10kgs)</option>
+                  <option value="3">SNS LARGE BOX (weight > 10kgs)</option>
+                </select>
+        </tr>
+    </table>
+
+    <br>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <h6 style=" text-align: center;">No. of Packages</h6>
+                </td>
+                <td style="padding-left:10px; text-align: center;">
+                    <h6>Weight Per Package</h6>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                      <input type="number" class="form-control" id="inputPassword2" [(ngModel)]="numPkg" name="numPkg" placeholder="No of Packages">
+                    </div>
+                </td>
+                <td>
+                    <input type="number" class="form-control" id="inputPassword2"  [(ngModel)]="weight" name="weight" placeholder="Enter the Weight">
+                </td>
+
+            </tr>
+
+
+        </table>
+        <button type="submit" class="btn btn-primary mb-2" >Calculate</button>
+      </div>
+    </form>
+</div>
+
+
+<div *ngIf="payment_section">
+
+
+    <form  class="payment" (ngSubmit) = "payment()">
+      <div class="form-group" *ngIf="calc">
+        <h4>Total Price is</h4>
+        <br>
+        <h5>$ {{price}}</h5>
+      </div>
+      <br>
+      <div>
+        <h4>3. Payment Details</h4>
+      </div>
+    <table class="mainPaymentTable">
+        <tr>
+                <td>
+                    <div>
+                        <h6>Card Details</h6>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="Card Details" required>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <h6>Name on the card</h6>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" class="form-control" id="inputPassword2" required>
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <h6>Card Number</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Card Number" required>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h6>CVV</h6>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="password" class="form-control" id="inputPassword2" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-primary mb-2" type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+
+    <!-- End of the package to be shipped -->
+
+</div>

@@ -1,0 +1,41 @@
+.form-inline{
+    max-width: 800px;
+    margin: auto;
+    font-family: Poppins;
+ }
+ 
+ .payment{
+     max-width: 800px;
+     margin: auto;
+     font-family: Poppins;
+ }
+ 
+ .mainAddressTable{
+     margin-left:70px ;
+     
+ }
+ 
+ .mainPaymentTable{
+     margin-left:70px ;
+ }
+ 
+ 
+ .deliveryImage {
+     background-image: url("../../../assets/Delivery.jpg");
+     background-repeat: repeat;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100%; 
+     width: 100%;
+     font-size: 120px;
+     text-align: center;
+     font-weight: bold;
+     text-transform: uppercase;
+     font-weight: 800;
+     -webkit-font-smoothing: antialiased;
+     padding: 200px 200px 200px 200px;
+     opacity: 0.8;
+ 
+ }
+

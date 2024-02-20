@@ -1,0 +1,43 @@
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/customerLogin" routerLinkActive="active">Home</a>
+          </li>
+          <li class="collapse navbar-collapse justify-content-between px-lg-3">
+            <a class="nav-link" routerLink="/modifyOrder" routerLinkActive="active">Modify Order</a>
+          </li>
+          <li class="collapse navbar-collapse justify-content-between px-lg-3">
+              <a class="nav-link"routerLink="/viewOrder" routerLinkActive="active">View Order</a>
+            </li>
+
+          <li class="collapse navbar-collapse justify-content-between px-lg-3">
+              <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+            </li>
+
+          <li>
+            <button class="btn btn-outline-success collapse navbar-collapse  justify-content-between px-lg-3" (click)="logout()" >Logout</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="container">
+    <div *ngIf="flag">
+      <div *ngFor="let item of resultJson">
+        <h5> Order id : {{item.o_id}}</h5>
+        <h5> Status : {{item.orderStatus}}</h5>
+        <h5>------------------------------------------</h5>
+        <br>
+        <br>
+      </div>
+
+    </div>
+  </div>

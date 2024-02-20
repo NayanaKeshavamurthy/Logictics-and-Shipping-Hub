@@ -1,0 +1,25 @@
+.rateUsForm{
+   max-width: 600px;
+   margin: auto;
+
+   position: relative;
+   font-weight: bolder;
+   text-transform: uppercase;
+   color: black;
+
+   
+   
+}
+.bgImg{
+    background-image: url(../../assets/bgImage.jpg);
+    background-repeat: repeat;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    height: 100%; 
+    width: 100%;
+   
+    
+}

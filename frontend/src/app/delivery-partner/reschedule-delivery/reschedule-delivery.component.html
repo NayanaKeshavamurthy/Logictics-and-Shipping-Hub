@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/agent" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a class="nav-link" routerLink="/agent">Home</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+          <a class="nav-link" routerLink="/rateUs" routerLinkActive="active">Rate Us</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "container justify-content-center">
+  <div class="row">
+    <div class = "col">
+      <img src="../../../assets/reschedule.jpg" style="width:400px;height:500px">
+    </div>
+    <div class="col">
+      <div *ngIf="!success">
+        <form #res="ngForm" >
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Tracking ID" name="oid" [(ngModel)]="oid" required>
+            <label for="floatingInput">Tracking ID</label>
+          </div>
+          <div class="form-floating">
+            <input type="date" class="form-control" id="floatingInput" name="date" [(ngModel)]="date"  required>
+
+          </div>
+          <div class="form-floating">
+
+            <button  class="w-100 btn btn-lg btn-primary" (click)="updateReschedule()"> Update Reschedule</button>
+
+          </div>
+        </form>
+      </div>
+      <div *ngIf="success">
+        <br><br><br><br>
+        <h5>Delivery Date is Updated</h5>
+      </div>
+
+    </div>
+  </div>
+</div>
+

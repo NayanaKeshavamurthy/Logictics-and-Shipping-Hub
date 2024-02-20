@@ -1,0 +1,80 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active"><h2 class=""><i class="fa fa-truck mr-2"></i>SNS <p class="">Logistics</p></h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/dropOffPackage" class="nav-link ">Place Order</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/admin" class="nav-link ">Update Price</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/coupon" class="nav-link">Update Order Status</a>
+      </li>
+      <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/wareouseinfo" class=" nav-link">Update warehouse info</a>
+
+      </li>
+       <li class="collapse navbar-collapse justify-content-between px-lg-3">
+        <a routerLink="/inventoryinfo" class="nav-item nav-link">Inventory info</a>
+       </li>
+
+
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid p-0">
+
+    <br>
+    <br>
+    <div class="container">
+    <form #upDate="ngForm"  (ngSubmit) = "onSubmit(upDate)">
+      <h5>Enter Order ID</h5>
+      <input type="text" class="drop"  style="width:fit-content" name="fName" [(ngModel)]="oid">
+      <br>
+      <br>
+
+    <h5>Select Warehouse</h5>
+    <select class="drop"  style="width:fit-content"  [(ngModel)]="wearhouse" name="wearhouse" >
+        <option value="1">SNS LAKE SHORE</option>
+        <option value="2">SNS BRIDGEPORT</option>
+        <option value="3">SNS FULLER PARK</option>
+    </select>
+
+    <br>
+    <br>
+
+    <h5>Enter Status</h5>
+    <select class="drop"   style="width:fit-content" [(ngModel)]="status" name="status">
+        <option value="2">Received in Origin Warehouse</option>
+        <option value="3">Moved Out Origin Warehouse</option>
+        <option value="4">Received in Nearby Warehouse</option>
+        <option value="5">Moved Out Nearby Warehouse</option>
+    </select>
+    <br>
+    <br>
+
+    <button class=" btn-primary py-2 px-4 d-none d-lg-block" type="Submit()">Update</button>
+    </form>
+    <br><br>
+</div>
+  </div>
+
+
+<!-- footer-->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+  <h3 class="mb-4" style="color:#3d7e70;">Get In Touch</h3>
+  <p><i class="fa fa-map-marker-alt mr-2"></i>#401, 32nd Street, Chicago, USA</p>
+  <p><i class="fa fa-phone-alt mr-2"></i>+1 773 823 6789</p>
+  <p><i class="fa fa-envelope mr-2"></i>info@kgf.com</p>
+  <div class="d-flex justify-content-start mt-4">
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>

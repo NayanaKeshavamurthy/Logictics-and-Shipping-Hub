@@ -1,0 +1,17 @@
+
+.drop{
+    width: 200px;
+}
+
+.btn-primary{
+    background-color: black;
+    color: white;
+}
+
+.footer{
+  position:fixed;
+  bottom:0;
+  width: 100% !important;
+
+
+}
